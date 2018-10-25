@@ -78,7 +78,7 @@ public class Kommandozeilenmenue {
 	
 	public void fehler()
 	{
-		System.out.println("Sie können nur 1,2 oder 3 eingeben!");
+		System.out.println("Sie können nur 1, 2, 3 oder 4 eingeben!");
 	}
 	
 	public void listeAusgeben() {
