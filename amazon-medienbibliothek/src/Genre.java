@@ -1,23 +1,24 @@
 
-public class Genre {
-	private String name;
+public class Genre extends Medien{
 	
-	public Genre(String name) {
-		super();
-		this.name = name;
+	private String genre;
+	
+	public Genre(String name, String kommentar, String erscheinungsdatum) {
+		super(name, kommentar, erscheinungsdatum);
+		this.genre = genre;
 	}
 
 	public String getName() {
-		return name;
+		return genre;
 	}
 
 	public void setName(String name) {
-		this.name = name;
+		this.genre = name;
 	}
 
 	@Override
 	public String toString() {
-		return "Genre [name=" + name + "]";
+		return "Genre [genre=" + genre + "]";
 	}
 	
 	

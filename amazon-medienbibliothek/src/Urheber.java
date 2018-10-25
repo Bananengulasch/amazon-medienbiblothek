@@ -1,4 +1,4 @@
-public class Urheber {
+public class Urheber extends Medien{
 	
 	private String vorname;
 	private String nachname;
