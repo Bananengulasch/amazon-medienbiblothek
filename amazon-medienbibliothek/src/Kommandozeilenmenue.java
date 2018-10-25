@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class Kommandozeilenmenue {
 
 	Scanner scan;
+	Medienbibliothek mb = new Medienbibliothek();
 
 	public Kommandozeilenmenue() {
 		this.scan = new Scanner(System.in);
@@ -10,25 +11,30 @@ public class Kommandozeilenmenue {
 
 	public void MenueAnzeigen() {
 		System.out.println("MENÜ");
-		System.out.println("1) AUSGABE");
-		System.out.println("2) RECHNEN");
-		System.out.println("3) exit");
+		System.out.println("1) FILME");
+		System.out.println("2) EBOOKS");
+		System.out.println("3) LISTE-AUSGEBEN");
+		System.out.println("4) exit");
 	}
 
 	public void start() {
+		System.out.println("---------------");
 		String s = "-";
-		while (!s.equals("3")) {
+		while (!s.equals("4")) {
 			MenueAnzeigen();
 			s = scan.nextLine();
 			switch(s)
 			{
 			case "1":
-				this.ausgabe();
+				this.filmEntscheidung();
 				break;
 			case "2":
-				this.rechnen();
+				this.booksEntscheidung();
 				break;
 			case "3":
+				this.listeAusgeben();
+				break;
+			case "4":
 				break;
 			default:
 				this.fehler();
@@ -38,19 +44,45 @@ public class Kommandozeilenmenue {
 		scan.close();
 	}
 	
-	public void ausgabe()
+	public void filmEntscheidung()
 	{
-		System.out.println("AUSGABE");
+		System.out.println("---------------");
+		String s = "-";
+		while (!s.equals("4")) {
+			s = scan.nextLine();
+			switch(s)
+			{
+			case "1":
+				this.filmEntscheidung();
+				break;
+			case "2":
+				this.booksEntscheidung();
+				break;
+			case "3":
+				this.listeAusgeben();
+				break;
+			case "4":
+				break;
+			default:
+				this.fehler();
+				break;
+			}
+		}
+		
 	}
 	
-	public void rechnen()
+	public void booksEntscheidung()
 	{
-		System.out.println("RECHNEN 1+1 = 2");
+		System.out.println("");
 	}
 	
 	public void fehler()
 	{
 		System.out.println("Sie können nur 1,2 oder 3 eingeben!");
+	}
+	
+	public void listeAusgeben() {
+		
 	}
 
 
