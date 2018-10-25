@@ -35,7 +35,9 @@ public class Medien{
 		this.erscheinungsdatum = erscheinungsdatum;
 	}
 	
-	
+	public  void anzeigen(){
+	         System.out.println("[Medien]: Name--> " + this.getName() + "./n"  + "Kommentar--> " + this.getKommentar()+ "./n"  + "Erscheinungsdatum--> " + this.getErscheinungsdatum());
+	}
 	
 	
 }

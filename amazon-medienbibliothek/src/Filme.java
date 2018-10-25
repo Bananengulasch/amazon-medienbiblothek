@@ -35,5 +35,10 @@ public class Filme extends Medien{
 	public void setHd(boolean hd) {
 		this.hd = hd;
 	}
+	
+	public  void anzeigen(){
+	         super.anzeigen();
+	         System.out.println("[Filme]: Spielzeit--> " + this.getSpielzeit() + "./n"  + "UHD ja/nein--> "+ this.isUhd()+ "./n"  + "HD ja/nein--> "+ this.isHd());
+	}
 }
 	
