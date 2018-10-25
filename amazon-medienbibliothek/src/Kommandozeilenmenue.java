@@ -26,7 +26,7 @@ public class Kommandozeilenmenue {
 			switch(s)
 			{
 			case "1":
-				this.filmEntscheidung();
+				this.filmeHinzufügen();
 				break;
 			case "2":
 				this.booksEntscheidung();
@@ -82,6 +82,10 @@ public class Kommandozeilenmenue {
 	}
 	
 	public void listeAusgeben() {
+		
+	}
+	
+	public void filmeHinzufügen() {
 		
 	}
 
