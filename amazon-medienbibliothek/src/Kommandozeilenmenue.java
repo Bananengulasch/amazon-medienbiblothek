@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Kommandozeilenmenue {
 
 	Scanner scan;
-
+	Medienbibliothek mb = new Medienbibliothek();
 	public Kommandozeilenmenue() {
 		this.scan = new Scanner(System.in);
 	}
