@@ -1,11 +1,10 @@
-public class Urheber extends Medien{
+public class Urheber{
 	
 	private String vorname;
 	private String nachname;
 	private String firmenname;
 	
 	public Urheber(String vorname, String nachname, String firmenname) {
-		super();
 		this.vorname = vorname;
 		this.nachname = nachname;
 		this.firmenname = firmenname;

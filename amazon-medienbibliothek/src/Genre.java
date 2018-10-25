@@ -1,10 +1,9 @@
 
-public class Genre extends Medien{
+public class Genre{
 	
 	private String genre;
 	
-	public Genre(String name, String kommentar, String erscheinungsdatum) {
-		super(name, kommentar, erscheinungsdatum);
+	public Genre(String genre) {
 		this.genre = genre;
 	}
 
