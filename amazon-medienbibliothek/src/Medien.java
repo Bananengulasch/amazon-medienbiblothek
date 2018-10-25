@@ -37,6 +37,6 @@ public class Medien{
 	
 	public  void anzeigen()
 	{
-	         System.out.println("[Medien]: Name--> " + this.getName() + "./n"  + "Kommentar--> " + this.getKommentar()+ "./n"  + "Erscheinungsdatum--> " + this.getErscheinungsdatum());
+	         System.out.println("[Medien]:"+"\n"+ "Name--> " + this.getName() + "\n"  + "Kommentar--> " + this.getKommentar()+ "\n"  + "Erscheinungsdatum--> " + this.getErscheinungsdatum());
 	}
 }

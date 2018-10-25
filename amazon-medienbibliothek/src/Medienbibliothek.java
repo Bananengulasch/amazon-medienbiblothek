@@ -10,6 +10,7 @@ public void medienHinzufuegen(Medien m) {
 
 public void anzeigen() {
 	for(Medien m : mediumsliste) {
+		System.out.println("----------------------");
 		m.anzeigen();
 	}
 }
