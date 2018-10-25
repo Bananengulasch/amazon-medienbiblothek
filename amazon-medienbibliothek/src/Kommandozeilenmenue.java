@@ -44,36 +44,16 @@ public class Kommandozeilenmenue {
 		scan.close();
 	}
 	
+	//Wenn einer der möglichen Fälle eintritt --> weitere Entscheidungsmöglichkeiten
+	
 	public void filmEntscheidung()
 	{
-		System.out.println("---------------");
-		String s = "-";
-		while (!s.equals("4")) {
-			s = scan.nextLine();
-			switch(s)
-			{
-			case "1":
-				this.filmEntscheidung();
-				break;
-			case "2":
-				this.booksEntscheidung();
-				break;
-			case "3":
-				this.listeAusgeben();
-				break;
-			case "4":
-				break;
-			default:
-				this.fehler();
-				break;
-			}
-		}
-		
+		System.out.println("---------------");	
 	}
 	
 	public void booksEntscheidung()
 	{
-		System.out.println("");
+		System.out.println("---------------");
 	}
 	
 	public void fehler()
@@ -85,7 +65,13 @@ public class Kommandozeilenmenue {
 		
 	}
 	
+	//Wenn Fall 1 eintritt --> weitere Entscheidungsmöglichkeiten
 	public void filmeHinzufügen() {
+		
+	}
+	
+	
+	public void filmeAusgeben() {
 		
 	}
 
