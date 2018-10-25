@@ -9,7 +9,7 @@ public class Kommandozeilenmenue {
 	}
 
 	public void MenueAnzeigen() {
-		System.out.println("MENÃœ");
+		System.out.println("MENÜ");
 		System.out.println("1) AUSGABE");
 		System.out.println("2) RECHNEN");
 		System.out.println("3) exit");
@@ -50,7 +50,7 @@ public class Kommandozeilenmenue {
 	
 	public void fehler()
 	{
-		System.out.println("Sie kÃ¶nnen nur 1,2 oder 3 eingeben!");
+		System.out.println("Sie können nur 1,2 oder 3 eingeben!");
 	}
 
 
