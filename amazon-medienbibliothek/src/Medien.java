@@ -1,14 +1,22 @@
 public class Medien{
 	
+	private int id;
 	private String name;
 	private String kommentar;
 	private String erscheinungsdatum;
+	private static int counter;
 	
 	public Medien(String name, String kommentar, String erscheinungsdatum) {
 		super();
+		counter++;
+		this.id = counter;
 		this.name = name;
 		this.kommentar = kommentar;
 		this.erscheinungsdatum = erscheinungsdatum;
+	}
+	
+	public int getId() {
+		return id;
 	}
 
 	public String getName() {
@@ -37,6 +45,6 @@ public class Medien{
 	
 	public  void anzeigen()
 	{
-	         System.out.println("[Medien]:"+"\n"+ "Name--> " + this.getName() + "\n"  + "Kommentar--> " + this.getKommentar()+ "\n"  + "Erscheinungsdatum--> " + this.getErscheinungsdatum());
+		System.out.println("\n"+"-------------------------"+"\n"+"\n"+"[Medium]:"+"\n"+ "ID--> " + this.getId() + "\n"+ "Name--> " + this.getName() + "\n"  + "Kommentar--> " + this.getKommentar()+ "\n"  + "Erscheinungsdatum--> " + this.getErscheinungsdatum());
 	}
 }

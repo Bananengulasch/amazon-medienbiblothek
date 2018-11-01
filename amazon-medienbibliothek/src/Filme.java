@@ -38,8 +38,8 @@ public class Filme extends Medien{
 	
 	public  void anzeigen()
 	{
-	         super.anzeigen();
-	         System.out.println("[Filme]:"+"\n"+ "Spielzeit--> " + this.getSpielzeit() + "\n"  + "UHD ja/nein--> "+ this.isUhd()+ "\n"  + "HD ja/nein--> "+ this.isHd());
+	    super.anzeigen();
+	    System.out.println("[Filminfos]:"+"\n"+ "Spielzeit--> " + this.getSpielzeit() + "\n"  + "UHD ja/nein--> "+ this.isUhd()+ "\n"  + "HD ja/nein--> "+ this.isHd());
 	}
 }
 	
