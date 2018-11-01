@@ -7,13 +7,14 @@ public class Kommandozeilenmenue {
 	
 	public Kommandozeilenmenue() {
 		this.scan = new Scanner(System.in);
+		bisherigeMedien();
 	}
 	
 	public void bisherigeMedien() {
 		Medien m1 = new Filme("Java Wars", "Claudio Landerer", "25.10.2018", 150, true, false);
-		Medien m2 = new EBooks("Krieg der Zangerle", "Claudio Landerer", "25.10.2018", 12345678, 120, 100000);
-		Medien m3 = new Filme("Der Hobbit", "Paul Zangerle", "01.11.2018", 200, false, false);
-		Medien m4 = new EBooks("French Defense", "Stefan Frenchie", "01.11.2018", 87654321, 175, 100);
+		Medien m2 = new EBooks("Cloverfield Paradox", "Julius Onah", "25.10.2018", 12345678, 120, 100000);
+		Medien m3 = new Filme("Haus des Geldes", "Alex Pina", "01.11.2018", 200, false, true);
+		Medien m4 = new EBooks("Poltergeist", "Tobe Hooper", "01.11.2018", 87654321, 175, 100);
 	
 		mb.medienHinzufuegen(m1);
 		mb.medienHinzufuegen(m2);
@@ -24,7 +25,7 @@ public class Kommandozeilenmenue {
 
 	public void MenueAnzeigen() {
 		System.out.println("-------------------------");
-		System.out.println("MENÜ");
+		System.out.println("HAUPTMENÜ");
 		System.out.println("1) FILME");
 		System.out.println("2) EBOOKS");
 		System.out.println("3) LISTE-AUSGEBEN");
@@ -33,24 +34,23 @@ public class Kommandozeilenmenue {
 	
 	public void unterMenueFilm() {
 		System.out.println("-------------------------");
-		System.out.println("Filmmenü");
+		System.out.println("FILMMENÜ");
 		System.out.println("1) HINZUFÜGEN");
 		System.out.println("2) ENTFERNEN");
 		System.out.println("3) LISTE-AUSGEBEN");
-		System.out.println("4) exit");
+		System.out.println("4) Zurück");
 	}
 	
 	public void unterMenueBook() {
 		System.out.println("-------------------------");
-		System.out.println("eBooksmenü");
+		System.out.println("EBOOKSMENÜ");
 		System.out.println("1) HINZUFÜGEN");
 		System.out.println("2) ENTFERNEN");
 		System.out.println("3) LISTE-AUSGEBEN");
-		System.out.println("4) exit");
+		System.out.println("4) Zurück");
 	}
 	
 	public void start() {
-		bisherigeMedien();
 		MenueAnzeigen();
 		Scanner scan = new Scanner(System.in);
 		String s = scan.nextLine();
@@ -66,7 +66,7 @@ public class Kommandozeilenmenue {
 			}else if(s.equals("3")) {
 				filmListeAusgeben();
 			}else if(s.equals("4")) {
-				System.out.println("Auf Wiedersehen!");
+				start();
 			}else {
 				fehler();
 			}
@@ -82,14 +82,15 @@ public class Kommandozeilenmenue {
 			}else if(s.equals("3")) {
 				bookListeAusgeben();
 			}else if(s.equals("4")) {
-				System.out.println("Auf Wiedersehen!");
+				start();
 			}else {
 				fehler();
 			}
 		}
 			//Möglichkeit 3 wurde gewählt
 		else if(s.equals("3")) {
-			mb.anzeigen();
+			listeAusgeben();
+			
 		}
 			//Möglichkeit 4 wurde gewählt
 		else if(s.equals("4")) {
@@ -105,6 +106,7 @@ public class Kommandozeilenmenue {
 	
 	public void listeAusgeben() {
 		mb.anzeigen();
+		start();
 	}
 	
 	public void fehler()
@@ -130,13 +132,41 @@ public class Kommandozeilenmenue {
         
         Medien m5 = new Filme(name, kommentar, datum, spielzeit, uhd, hd);
         mb.medienHinzufuegen(m5);
-        mb.anzeigen();
+        start();
 	}
 	
-	public void filmEntfernen() {
+	public void filmEntfernen() {		
+		System.out.println("-------------------------");
 		System.out.println("Welchen Film möchten Sie entfernen?");
-		System.out.println("Mögliche Eingaben: 1, 2, 3, 4, 5, 6");
+		System.out.println("Mögliche Eingaben:");
+		System.out.println("1) Java Wars");
+		System.out.println("2) Cloverfield Paradox");
+		System.out.println("3) Haus des Geldes");
+		System.out.println("4) Poltergeist");
+		System.out.println("5) Zurück");
+		
 		String s = scan.nextLine();
+		if(s.equals("1")) {
+			mb.medienEntfernen(m1);
+			start();
+		}
+		else if(s.equals("2")) {
+			mb.medienEntfernen(m2);
+			start();
+		}
+		else if(s.equals("3")) {
+			mb.medienEntfernen(m3);
+			start();
+		}
+		else if(s.equals("4")) {
+			mb.medienEntfernen(m4);
+			start();
+		}
+		else if(s.equals("5")) {
+			start();
+		}
+		start();
+					
 	}
 	
 	public void filmListeAusgeben() {
@@ -144,6 +174,7 @@ public class Kommandozeilenmenue {
 		{
 			filme.anzeigen();
 		}
+		start();
 	}
 	
 	//Wenn Fall 2 eintritt --> weitere Entscheidungsmöglichkeiten
@@ -164,7 +195,7 @@ public class Kommandozeilenmenue {
         
         Medien m6 = new EBooks(name, kommentar, datum, isbn, seiten, auflage);
         mb.medienHinzufuegen(m6);
-        mb.anzeigen();
+        start();
 	}
 		
 	public void bookEntfernen() {
@@ -176,6 +207,7 @@ public class Kommandozeilenmenue {
 		{
 			ebooks.anzeigen();
 		}
+		start();
 	}
 
 }
