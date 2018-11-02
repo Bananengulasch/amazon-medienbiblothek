@@ -43,13 +43,14 @@ public class Medien{
 		this.erscheinungsdatum = erscheinungsdatum;
 	}
 	
-	public void gleicheId(int id) { 
-		if(this.id == id) {
-			
-		}else {
-			System.out.println("Dieses Medium existiert nicht!");
-		}
-	}
+	@Override
+	public boolean equals(Object obj)
+	  {
+	    if ( (name.equals(name))
+	        && (id == id) ) 
+	        return true;
+	    return false;
+	  }
 	
 	public  void anzeigen()
 	{

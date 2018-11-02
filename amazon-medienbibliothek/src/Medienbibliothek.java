@@ -11,32 +11,28 @@ public class Medienbibliothek {
 		mediumsliste.add(m);
 	}
 	
-	public void medienEntfernenBeschreibung() {
-		for(Medien m : mediumsliste) {
-			m.entfernungsBeschreibung();
+	public void medienEntfernenFilmBeschreibung() {
+		alleFilmeAlsListe();
+		for(Medien f : filmliste) {
+			f.entfernungsBeschreibung();
 		}
 	}
 	
-	public void gleicheId(int id) { 
-		if(this.id == id) {
-			medienEntfernen(id);
+	public void medienEntfernenBookBeschreibung() {
+		alleEBooksAlsListe();
+		for(Medien b : ebookliste) {
+			b.entfernungsBeschreibung();
+		}
+	}
+	
+	public void medienEntfernen(Object m) {
+		if(m.equals(m)) {
+			System.out.println("Medium erfolgreich entfernt!");
+			mediumsliste.remove(m);
 		}else {
 			System.out.println("Dieses Medium existiert nicht!");
 		}
 	}
-	
-	public void medienEntfernen(int id) {
-				System.out.println("Dieses Medium wurde entfernt!");
-				mediumsliste.remove(id);
-	}
-	
-//	public void medienEntfernen(Object m) {
-//		if(m.equals(m)) {
-//			mediumsliste.remove(m);
-//		}else {
-//			System.out.println("Dieses Medium existiert nicht!");
-//		}
-//	}
 
 	//Ausgeben aller Medien
 	public void anzeigen() {
