@@ -38,6 +38,6 @@ public class EBooks extends Medien{
 	public void anzeigen()
 	{
         super.anzeigen();
-        System.out.println("[eBookinfos]:"+"\n"+ "ISBN--> " + this.getIsbn() + "\n"  + "Seitenanzahl--> "+ this.getSeiten()+ "\n"  + "Auflage--> "+ this.getAuflage());
+        System.out.println("[eBookinfos]:"+"\n"+ "ISBN -->              " + this.getIsbn() + "\n"  + "Seitenanzahl -->      "+ this.getSeiten()+ "\n"  + "Auflage -->           "+ this.getAuflage());
 	}
 }

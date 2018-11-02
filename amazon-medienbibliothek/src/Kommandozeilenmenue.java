@@ -24,7 +24,7 @@ public class Kommandozeilenmenue {
 
 
 	public void MenueAnzeigen() {
-		System.out.println("-------------------------");
+		System.out.println("-----------------------------------------");
 		System.out.println("HAUPTMENÜ");
 		System.out.println("1) FILME");
 		System.out.println("2) EBOOKS");
@@ -33,7 +33,7 @@ public class Kommandozeilenmenue {
 	}
 	
 	public void unterMenueFilm() {
-		System.out.println("-------------------------");
+		System.out.println("-----------------------------------------");
 		System.out.println("FILMMENÜ");
 		System.out.println("1) HINZUFÜGEN");
 		System.out.println("2) ENTFERNEN");
@@ -42,7 +42,7 @@ public class Kommandozeilenmenue {
 	}
 	
 	public void unterMenueBook() {
-		System.out.println("-------------------------");
+		System.out.println("-----------------------------------------");
 		System.out.println("EBOOKSMENÜ");
 		System.out.println("1) HINZUFÜGEN");
 		System.out.println("2) ENTFERNEN");
@@ -116,7 +116,7 @@ public class Kommandozeilenmenue {
 	
 	//Wenn Fall 1 eintritt --> weitere Entscheidungsmöglichkeiten
 	public void filmHinzufügen() {
-		System.out.println("-------------------------");
+		System.out.println("-----------------------------------------");
 		System.out.println("Bitte geben Sie den Namen des neuen Films ein:");
 		String name = scan.nextLine();
 		System.out.println("Bitte geben Sie einen Kommentar zu dem neuen Film ein:");
@@ -135,38 +135,33 @@ public class Kommandozeilenmenue {
         start();
 	}
 	
-	public void filmEntfernen() {		
-		System.out.println("-------------------------");
-		System.out.println("Welchen Film möchten Sie entfernen?");
+	public void filmEntfernen() {	
+		System.out.println("-----------------------------------------");
+		System.out.println("Bitte geben Sie die ID des Mediums ein:");
 		System.out.println("Mögliche Eingaben:");
-		System.out.println("1) Java Wars");
-		System.out.println("2) Cloverfield Paradox");
-		System.out.println("3) Haus des Geldes");
-		System.out.println("4) Poltergeist");
-		System.out.println("5) Zurück");
-		
+		mb.medienEntfernenBeschreibung();
+		System.out.println("0) Zurück");
 		String s = scan.nextLine();
-		if(s.equals("1")) {
-			mb.medienEntfernen(m1);
-			start();
-		}
-		else if(s.equals("2")) {
-			mb.medienEntfernen(m2);
-			start();
-		}
-		else if(s.equals("3")) {
-			mb.medienEntfernen(m3);
-			start();
-		}
-		else if(s.equals("4")) {
-			mb.medienEntfernen(m4);
-			start();
-		}
-		else if(s.equals("5")) {
-			start();
-		}
-		start();
-					
+        if(s.equals("1")) {
+                mb.medienEntfernen(1);
+                start();
+        }
+        else if(s.equals("2")) {
+                mb.medienEntfernen(2);
+                start();
+        }
+        else if(s.equals("3")) {
+                mb.medienEntfernen(3);
+                start();
+        }
+        else if(s.equals("4")) {
+                mb.medienEntfernen(4);
+                start();
+        }
+        else if(s.equals("0")) {
+                start();
+        }
+        start();
 	}
 	
 	public void filmListeAusgeben() {
@@ -179,7 +174,7 @@ public class Kommandozeilenmenue {
 	
 	//Wenn Fall 2 eintritt --> weitere Entscheidungsmöglichkeiten
 	public void bookHinzufügen() {
-		System.out.println("-------------------------");
+		System.out.println("-----------------------------------------");
 		System.out.println("Bitte geben Sie den Namen des neuen eBooks ein:");
 		String name = scan.nextLine();
 		System.out.println("Bitte geben Sie einen Kommentar zu dem neuen eBook ein:");

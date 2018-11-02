@@ -11,9 +11,32 @@ public class Medienbibliothek {
 		mediumsliste.add(m);
 	}
 	
-	public void medienEntfernen(Medien m) {
-		mediumsliste.remove(m);
+	public void medienEntfernenBeschreibung() {
+		for(Medien m : mediumsliste) {
+			m.entfernungsBeschreibung();
+		}
 	}
+	
+	public void gleicheId(int id) { 
+		if(this.id == id) {
+			medienEntfernen(id);
+		}else {
+			System.out.println("Dieses Medium existiert nicht!");
+		}
+	}
+	
+	public void medienEntfernen(int id) {
+				System.out.println("Dieses Medium wurde entfernt!");
+				mediumsliste.remove(id);
+	}
+	
+//	public void medienEntfernen(Object m) {
+//		if(m.equals(m)) {
+//			mediumsliste.remove(m);
+//		}else {
+//			System.out.println("Dieses Medium existiert nicht!");
+//		}
+//	}
 
 	//Ausgeben aller Medien
 	public void anzeigen() {

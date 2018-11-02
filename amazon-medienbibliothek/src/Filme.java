@@ -6,7 +6,6 @@ public class Filme extends Medien{
 	
 	public Filme(String name, String kommentar, String erscheinungsdatum, int spielzeit, boolean uhd, boolean hd) {
 		super(name, kommentar, erscheinungsdatum);
-		// TODO Auto-generated constructor stub
 		this.spielzeit = spielzeit;
 		this.uhd = uhd;
 		this.hd = hd;
@@ -39,7 +38,7 @@ public class Filme extends Medien{
 	public  void anzeigen()
 	{
 	    super.anzeigen();
-	    System.out.println("[Filminfos]:"+"\n"+ "Spielzeit--> " + this.getSpielzeit() + "\n"  + "UHD ja/nein--> "+ this.isUhd()+ "\n"  + "HD ja/nein--> "+ this.isHd());
+	    System.out.println("[Filminfos]:"+"\n"+ "Spielzeit -->         " + this.getSpielzeit() + "\n"  + "UHD ja/nein -->       "+ this.isUhd()+ "\n"  + "HD ja/nein -->        "+ this.isHd());
 	}
 }
 	

@@ -1,7 +1,7 @@
 public class Medien{
 	
 	private int id;
-	private String name;
+	protected String name;
 	private String kommentar;
 	private String erscheinungsdatum;
 	private static int counter;
@@ -43,8 +43,20 @@ public class Medien{
 		this.erscheinungsdatum = erscheinungsdatum;
 	}
 	
+	public void gleicheId(int id) { 
+		if(this.id == id) {
+			
+		}else {
+			System.out.println("Dieses Medium existiert nicht!");
+		}
+	}
+	
 	public  void anzeigen()
 	{
-		System.out.println("\n"+"-------------------------"+"\n"+"\n"+"[Medium]:"+"\n"+ "ID--> " + this.getId() + "\n"+ "Name--> " + this.getName() + "\n"  + "Kommentar--> " + this.getKommentar()+ "\n"  + "Erscheinungsdatum--> " + this.getErscheinungsdatum());
+		System.out.println("\n"+"-----------------------------------------"+"\n"+"\n"+"[Medium]:"+"\n"+ "ID -->                " + this.getId() + "\n"+ "Name -->              " + this.getName() + "\n"  + "Kommentar -->         " + this.getKommentar()+ "\n"  + "Erscheinungsdatum --> " + this.getErscheinungsdatum());
+	}
+	
+	public void entfernungsBeschreibung() {
+		System.out.println("ID & Name -->         " + this.getId()+ ", " + this.getName());
 	}
 }
