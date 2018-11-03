@@ -11,22 +11,14 @@ public class Medienbibliothek {
 		mediumsliste.add(m);
 	}
 	
-	public void medienEntfernenFilmBeschreibung() {
-		alleFilmeAlsListe();
-		for(Medien f : filmliste) {
-			f.entfernungsBeschreibung();
+	public void kurzBeschreibung() {
+		for(Medien m : mediumsliste) {
+			m.entfernungsBeschreibung();
 		}
 	}
 	
-	public void medienEntfernenBookBeschreibung() {
-		alleEBooksAlsListe();
-		for(Medien b : ebookliste) {
-			b.entfernungsBeschreibung();
-		}
-	}
-	
-	public void medienEntfernen(Object m) {
-		if(m.equals(m)) {
+	public void medienEntfernen(Medien m) {
+		if(equals(m) == true) {
 			System.out.println("Medium erfolgreich entfernt!");
 			mediumsliste.remove(m);
 		}else {

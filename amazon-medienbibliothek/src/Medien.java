@@ -43,14 +43,13 @@ public class Medien{
 		this.erscheinungsdatum = erscheinungsdatum;
 	}
 	
-	@Override
-	public boolean equals(Object obj)
-	  {
-	    if ( (name.equals(name))
-	        && (id == id) ) 
-	        return true;
-	    return false;
-	  }
+	public boolean equals(Medien other) {
+	    if(this.id == other.id) {
+	    	return true;
+	    }else {
+	    	return false;
+	    	}
+	    }
 	
 	public  void anzeigen()
 	{
@@ -58,6 +57,6 @@ public class Medien{
 	}
 	
 	public void entfernungsBeschreibung() {
-		System.out.println("ID & Name -->         " + this.getId()+ ", " + this.getName());
+		System.out.println("ID, Name, Typ -->     " + this.getId()+ ", " + this.getClass() + ", "+ this.getName());
 	}
 }

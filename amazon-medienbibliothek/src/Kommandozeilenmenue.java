@@ -50,6 +50,14 @@ public class Kommandozeilenmenue {
 		System.out.println("4) Zurück");
 	}
 	
+	public void unterMenueListe() {
+		System.out.println("-----------------------------------------");
+		System.out.println("LISTENMENÜ");
+		System.out.println("1) DETAILS");
+		System.out.println("2) KURZ");
+		System.out.println("3) Zurück");
+	}
+	
 	public void start() {
 		MenueAnzeigen();
 		Scanner scan = new Scanner(System.in);
@@ -89,7 +97,7 @@ public class Kommandozeilenmenue {
 		}
 			//Möglichkeit 3 wurde gewählt
 		else if(s.equals("3")) {
-			listeAusgeben();
+			listeAusgebenEntscheidung();
 			
 		}
 			//Möglichkeit 4 wurde gewählt
@@ -107,6 +115,24 @@ public class Kommandozeilenmenue {
 	public void listeAusgeben() {
 		mb.anzeigen();
 		start();
+	}
+	
+	public void listeAusgebenEntscheidung() {
+		unterMenueListe();
+		String s = scan.nextLine();
+		if(s.equals("1")) {
+			listeAusgeben();
+			start();
+		}
+		else if(s.equals("2")) {
+			mb.kurzBeschreibung();
+			start();
+		}
+		else if(s.equals("3")) {
+			start();
+		}else {
+			System.out.println("Sie können nur 1,2 oder 3 eingeben!");
+		}
 	}
 	
 	public void fehler()
@@ -139,31 +165,30 @@ public class Kommandozeilenmenue {
 		System.out.println("-----------------------------------------");
 		System.out.println("Bitte geben Sie die ID des Mediums ein:");
 		System.out.println("Mögliche Eingaben:");
-		mb.medienEntfernenFilmBeschreibung();
+		mb.kurzBeschreibung();
 		System.out.println("0) Zurück");
-		String s = scan.nextLine();
-        if(s.equals("1")) {
-                mb.medienEntfernen(1);
-                start();
-        }
-        else if(s.equals("2")) {
-                mb.medienEntfernen(2);
-                start();
-        }
-        else if(s.equals("3")) {
-                mb.medienEntfernen(3);
-                start();
-        }
-        else if(s.equals("4")) {
-                mb.medienEntfernen(4);
-                start();
-        }
-        else if(s.equals("0")) {
-                start();
-        }else {
-        	System.out.println("Sie können nur einen gültigen Wert eingeben!");
-        }
-        start();
+//		String s = scan.nextLine();
+//        if(s.equals("1")) {
+//                mb.medienEntfernen(m1);
+//        }
+//        else if(s.equals("2")) {
+//                mb.medienEntfernen(2);
+//                start();
+//        }
+//        else if(s.equals("3")) {
+//                mb.medienEntfernen(3);
+//                start();
+//        }
+//        else if(s.equals("4")) {
+//                mb.medienEntfernen(4);
+//                start();
+//        }
+//        else if(s.equals("0")) {
+//                start();
+//        }else {
+//        	System.out.println("Sie können nur einen gültigen Wert eingeben!");
+//        }
+//        start();
 	}
 	
 	public void filmListeAusgeben() {
@@ -196,34 +221,34 @@ public class Kommandozeilenmenue {
 	}
 		
 	public void bookEntfernen() {
-		System.out.println("-----------------------------------------");
-		System.out.println("Bitte geben Sie die ID des Mediums ein:");
-		System.out.println("Mögliche Eingaben:");
-		mb.medienEntfernenBookBeschreibung();
-		System.out.println("0) Zurück");
-		String s = scan.nextLine();
-        if(s.equals("1")) {
-                mb.medienEntfernen(1);
-                start();
-        }
-        else if(s.equals("2")) {
-                mb.medienEntfernen(2);
-                start();
-        }
-        else if(s.equals("3")) {
-                mb.medienEntfernen(3);
-                start();
-        }
-        else if(s.equals("4")) {
-                mb.medienEntfernen(4);
-                start();
-        }
-        else if(s.equals("0")) {
-                start();
-        }else {
-        	System.out.println("Sie können nur einen gültigen Wert eingeben!");
-        }
-        start();
+//		System.out.println("-----------------------------------------");
+//		System.out.println("Bitte geben Sie die ID des Mediums ein:");
+//		System.out.println("Mögliche Eingaben:");
+//		mb.kurzBeschreibung();
+//		System.out.println("0) Zurück");
+//		String s = scan.nextLine();
+//        if(s.equals("1")) {
+//                mb.medienEntfernen(1);
+//                start();
+//        }
+//        else if(s.equals("2")) {
+//                mb.medienEntfernen(2);
+//                start();
+//        }
+//        else if(s.equals("3")) {
+//                mb.medienEntfernen(3);
+//                start();
+//        }
+//        else if(s.equals("4")) {
+//                mb.medienEntfernen(4);
+//                start();
+//        }
+//        else if(s.equals("0")) {
+//                start();
+//        }else {
+//        	System.out.println("Sie können nur einen gültigen Wert eingeben!");
+//        }
+//        start();
 	}
 		
 	public void bookListeAusgeben() {
