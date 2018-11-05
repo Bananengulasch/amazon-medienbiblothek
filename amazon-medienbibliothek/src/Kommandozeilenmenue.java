@@ -13,14 +13,18 @@ public class Kommandozeilenmenue {
 	
 	public void bisherigeMedien() {
 		Medien m1 = new Filme("Java Wars", "Claudio Landerer", "25.10.2018", 150, true, false);
-		Medien m2 = new EBooks("Cloverfield Paradox", "Julius Onah", "25.10.2018", 12345678, 120, 100000);
+		Medien m2 = new EBooks("Cloverfield Paradox", "Julius Onah", "25.10.2018", 12345678, 120, 10000);
 		Medien m3 = new Filme("Haus des Geldes", "Alex Pina", "01.11.2018", 200, false, true);
-		Medien m4 = new EBooks("Poltergeist", "Tobe Hooper", "01.11.2018", 87654321, 175, 100);
+		Medien m4 = new EBooks("Poltergeist", "Tobe Hooper", "01.11.2018", 87654321, 175, 1000000);
+		Medien m5 = new Filme("Sharknado", "Anthony C. Ferrante", "05.11.2018", 130, false, false);
+		Medien m6 = new EBooks("Java - Die Insel", "Claudio Landerer", "05.11.2018", 13658923, 150, 1000);
 	
 		mb.medienHinzufuegen(m1);
 		mb.medienHinzufuegen(m2);
 		mb.medienHinzufuegen(m3);
 		mb.medienHinzufuegen(m4);
+		mb.medienHinzufuegen(m5);
+		mb.medienHinzufuegen(m6);
 	}
 
 
@@ -149,8 +153,8 @@ public class Kommandozeilenmenue {
         System.out.println("Ist der Film HD?");
         boolean hd = scan.nextBoolean();
         
-        Medien m5 = new Filme(name, kommentar, datum, spielzeit, uhd, hd);
-        mb.medienHinzufuegen(m5);
+        Medien m7 = new Filme(name, kommentar, datum, spielzeit, uhd, hd);
+        mb.medienHinzufuegen(m7);
         start();
 	}
 	
@@ -178,8 +182,8 @@ public class Kommandozeilenmenue {
         System.out.println("Bitte geben Sie die Auflagszahl des neuen eBooks ein:");
         int auflage = scan.nextInt();
         
-        Medien m6 = new EBooks(name, kommentar, datum, isbn, seiten, auflage);
-        mb.medienHinzufuegen(m6);
+        Medien m8 = new EBooks(name, kommentar, datum, isbn, seiten, auflage);
+        mb.medienHinzufuegen(m8);
         start();
 	}
 	
