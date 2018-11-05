@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Kommandozeilenmenue {
@@ -184,7 +185,9 @@ public class Kommandozeilenmenue {
 	
 	public void mediumFiltern() {
 		System.out.println("-----------------------------------------");
-		System.out.println("Bitte geben Sie den Namen des gesuchten Films ein:");
+		System.out.println("Bitte geben Sie den vollständigen Titel des gesuchten Films ein:");
+		String s = scan.nextLine();
+		mb.mediumFiltern(s);
 		
 	}
 		

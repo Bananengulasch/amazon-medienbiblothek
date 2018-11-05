@@ -54,4 +54,13 @@ public class Medienbibliothek {
 		}
 		return ebookliste;
 	}
+	
+	public void mediumFiltern(String titel) {
+		for (Medien m : mediumsliste)
+		{
+	       if (m.getName().toLowerCase().equals(titel.toLowerCase())) {
+	    	   m.anzeigen();
+	       }
+		}
+	}
 }
