@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Kommandozeilenmenue {
@@ -28,9 +27,10 @@ public class Kommandozeilenmenue {
 		System.out.println("-----------------------------------------");
 		System.out.println("HAUPTMENÜ");
 		System.out.println("1) HINZUFÜGEN");
-		System.out.println("2) FILTERN");
-		System.out.println("3) LISTE-AUSGEBEN");
-		System.out.println("4) exit");
+		System.out.println("2) ENTFERNEN");
+		System.out.println("3) FILTERN");
+		System.out.println("4) LISTE-AUSGEBEN");
+		System.out.println("5) exit");
 	}
 	
 	public void unterMenueHinzufügen() {
@@ -39,6 +39,13 @@ public class Kommandozeilenmenue {
 		System.out.println("1) FILM-HINZUFÜGEN");
 		System.out.println("2) EBOOK-HINZUFÜGEN");
 		System.out.println("3) Zurück");
+	}
+	
+	public void unterMenueEnftfernen() {
+		System.out.println("-----------------------------------------");
+		System.out.println("ENTFERNENMENÜ");
+		System.out.println("1) ENTFERNEN");
+		System.out.println("2) Zurück");
 	}
 	
 	public void unterMenueFiltern() {
@@ -78,8 +85,22 @@ public class Kommandozeilenmenue {
 				fehler();
 			}
 		}
+		
 		//Möglichkeit 2 wurde gewählt
-		else if(s.equals("2")) {
+		if(s.equals("2")) {
+			unterMenueEnftfernen();
+			s = scan.nextLine();
+			if(s.equals("1")) {
+				medienEntfernen();
+			}else if(s.equals("2")) {
+				start();
+			}else {
+				fehler();
+			}
+		}
+		
+		//Möglichkeit 3 wurde gewählt
+		else if(s.equals("3")) {
 			unterMenueFiltern();
 			s = scan.nextLine();
 			if(s.equals("1")) {
@@ -90,8 +111,8 @@ public class Kommandozeilenmenue {
 				fehler();
 			}
 		}
-			//Möglichkeit 3 wurde gewählt
-		else if(s.equals("3")) {
+			//Möglichkeit 4 wurde gewählt
+		else if(s.equals("4")) {
 			unterMenueListe();
 			s = scan.nextLine();
 			if(s.equals("1")) {
@@ -112,8 +133,8 @@ public class Kommandozeilenmenue {
 				fehler();
 			}
 		}
-			//Möglichkeit 4 wurde gewählt
-		else if(s.equals("4")) {
+			//Möglichkeit 5 wurde gewählt
+		else if(s.equals("5")) {
 			System.out.println("Auf Wiedersehen!");
 		}
 		//Fehlermeldung bei ungültiger Eingabe
@@ -126,6 +147,15 @@ public class Kommandozeilenmenue {
 	
 	public void listeAusgeben() {
 		mb.anzeigen();
+	}
+	
+	public void medienEntfernen(){
+		System.out.println("-----------------------------------------");
+		System.out.println("Bitte geben Sie den vollständigen Titel des gesuchten Films ein:");
+		mb.kurzBeschreibung();
+		String s = scan.nextLine();
+		mb.medienEntfernen(s);
+		start();
 	}
 	
 	public void fehler()

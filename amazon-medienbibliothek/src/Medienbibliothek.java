@@ -11,13 +11,26 @@ public class Medienbibliothek {
 		mediumsliste.add(m);
 	}
 	
+	public void medienEntfernen(String name) {
+		for (Medien m : mediumsliste)
+		{
+	       if (m.getName().toLowerCase().equals(name.toLowerCase())) {
+	    	   mediumsliste.remove(m);
+	    	   System.out.println("Medium erfolgreich entfernt!");
+	    	   break;
+	       }else {
+	    	   System.out.println("Dieses Medium existiert nicht!");
+	       }
+		}
+	}
+	
 	public void kurzBeschreibung() {
 		for(Medien m : mediumsliste) {
 			m.entfernungsBeschreibung();
 		}
 	}
 	
-	public void medienEntfernen(Medien m) {
+	public void medienEntfernen1(Medien m) {
 		if(equals(m) == true) {
 			System.out.println("Medium erfolgreich entfernt!");
 			mediumsliste.remove(m);
