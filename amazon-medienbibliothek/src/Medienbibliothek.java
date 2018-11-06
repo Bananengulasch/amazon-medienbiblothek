@@ -55,10 +55,10 @@ public class Medienbibliothek {
 		return ebookliste;
 	}
 	
-	public void mediumFiltern(String titel) {
+	public void mediumFiltern(String name) {
 		for (Medien m : mediumsliste)
 		{
-	       if (m.getName().toLowerCase().equals(titel.toLowerCase())) {
+	       if (m.getName().toLowerCase().equals(name.toLowerCase())) {
 	    	   m.anzeigen();
 	       }
 		}

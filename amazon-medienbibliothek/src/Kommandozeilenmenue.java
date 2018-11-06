@@ -16,15 +16,11 @@ public class Kommandozeilenmenue {
 		Medien m2 = new EBooks("Cloverfield Paradox", "Julius Onah", "25.10.2018", 12345678, 120, 10000);
 		Medien m3 = new Filme("Haus des Geldes", "Alex Pina", "01.11.2018", 200, false, true);
 		Medien m4 = new EBooks("Poltergeist", "Tobe Hooper", "01.11.2018", 87654321, 175, 1000000);
-		Medien m5 = new Filme("Sharknado", "Anthony C. Ferrante", "05.11.2018", 130, false, false);
-		Medien m6 = new EBooks("Java - Die Insel", "Claudio Landerer", "05.11.2018", 13658923, 150, 1000);
 	
 		mb.medienHinzufuegen(m1);
 		mb.medienHinzufuegen(m2);
 		mb.medienHinzufuegen(m3);
 		mb.medienHinzufuegen(m4);
-		mb.medienHinzufuegen(m5);
-		mb.medienHinzufuegen(m6);
 	}
 
 
